@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
 import { HeartIcon, MessageCircleIcon, UserPlusIcon } from 'lucide-react';
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 
@@ -96,7 +95,7 @@ const NotificationPage = () => {
                                                     <div className="text-sm text-muted-foreground rounded-md p-2 bg-muted/30 mt-2">
                                                         <p>{notification.post.content}</p>
                                                         {notification.post.image && (
-                                                            <Image
+                                                            <img
                                                                 src={notification.post.image}
                                                                 alt="Post content"
                                                                 className="mt-2 rounded-md w-full max-w-[200px] h-auto object-cover"
