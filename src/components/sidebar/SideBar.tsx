@@ -3,7 +3,7 @@ import { Card, CardContent } from "../ui/card";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Separator } from "../ui/separator";
-import { LinkIcon, MapPinIcon } from "lucide-react";
+import { LinkIcon, MapPinIcon, UserPlus } from "lucide-react";
 import UnAuthenticatedSidebar from "./UnAuthenticatedSidebar";
 import { getUserByClerkId } from "@/actions/user.actions";
 
@@ -69,6 +69,18 @@ export const Sidebar = async () => {
                                     "No website"
                                 )}
                             </div>
+                            <div className='flex items-center justify-between text-muted-foreground'>
+
+                                <Link href={'/network'} className="flex items-center hover:underline">
+                                    <UserPlus className='w-4 h-4 mr-2' />
+                                    network
+                                </Link>
+                                <div>
+                                    {user?._count.following}
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
                 </CardContent>

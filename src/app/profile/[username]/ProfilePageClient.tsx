@@ -180,7 +180,7 @@ function ProfilePageClient({
                         </CardContent>
                     </Card>
                 </div>
-
+                {/* tab view */}
                 <Tabs defaultValue="posts" className="w-full">
                     <TabsList className="w-full justify-start border-b rounded-none h-auto p-0 bg-transparent">
                         <TabsTrigger

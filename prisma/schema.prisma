@@ -31,6 +31,7 @@ model User {
   comments Comment[] // one-to-many
   likes    Like[] // one-to-many
 
+  // many-to-many
   followers Follows[] @relation("following") //  users this user follows 
   following Follows[] @relation("follower") // users who follow this user
 
